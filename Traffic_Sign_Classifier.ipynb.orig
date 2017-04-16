@@ -39,7 +39,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 61,
+   "execution_count": 88,
    "metadata": {
     "collapsed": false,
     "deletable": true,
@@ -182,7 +182,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 63,
+   "execution_count": 90,
    "metadata": {
     "collapsed": false,
     "deletable": true,
@@ -273,7 +273,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 64,
+   "execution_count": 91,
    "metadata": {
     "collapsed": false,
     "deletable": true,
@@ -306,9 +306,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 65,
+   "execution_count": 92,
    "metadata": {
-    "collapsed": true
+    "collapsed": true,
+    "deletable": true,
+    "editable": true
    },
    "outputs": [],
    "source": [
@@ -319,9 +321,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 66,
+   "execution_count": 93,
    "metadata": {
-    "collapsed": true
+    "collapsed": true,
+    "deletable": true,
+    "editable": true
    },
    "outputs": [],
    "source": [
@@ -338,7 +342,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 70,
+   "execution_count": 94,
    "metadata": {
     "collapsed": true,
     "deletable": true,
@@ -444,9 +448,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 68,
+   "execution_count": 95,
    "metadata": {
-    "collapsed": true
+    "collapsed": true,
+    "deletable": true,
+    "editable": true
    },
    "outputs": [],
    "source": [
@@ -458,7 +464,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 71,
+   "execution_count": 96,
    "metadata": {
     "collapsed": false,
     "deletable": true,
@@ -496,9 +502,15 @@
   },
   {
    "cell_type": "code",
+<<<<<<< HEAD
    "execution_count": 75,
+=======
+   "execution_count": 97,
+>>>>>>> 3d68f4ccf2dfa68c8c3e35e0ded55ee8c8d1ecd1
    "metadata": {
-    "collapsed": false
+    "collapsed": false,
+    "deletable": true,
+    "editable": true
    },
    "outputs": [
     {
@@ -508,32 +520,95 @@
       "Training...\n",
       "\n",
       "EPOCH 1 ...\n",
+<<<<<<< HEAD
       "Validation Accuracy = 0.324\n",
       "\n",
       "EPOCH 2 ...\n",
-      "Validation Accuracy = 0.685\n",
+      "Validation Accuracy = 0.658\n",
       "\n",
       "EPOCH 3 ...\n",
-      "Validation Accuracy = 0.810\n",
+      "Validation Accuracy = 0.787\n",
       "\n",
       "EPOCH 4 ...\n",
-      "Validation Accuracy = 0.884\n",
+      "Validation Accuracy = 0.863\n",
       "\n",
       "EPOCH 5 ...\n",
-      "Validation Accuracy = 0.909\n",
+      "Validation Accuracy = 0.914\n",
       "\n",
       "EPOCH 6 ...\n",
-      "Validation Accuracy = 0.916\n",
+      "Validation Accuracy = 0.924\n",
       "\n",
       "EPOCH 7 ...\n",
-      "Validation Accuracy = 0.954\n",
+      "Validation Accuracy = 0.949\n",
       "\n",
       "EPOCH 8 ...\n",
-      "Validation Accuracy = 0.964\n",
+      "Validation Accuracy = 0.963\n",
+=======
+      "Validation Accuracy = 0.348\n",
+      "\n",
+      "EPOCH 2 ...\n",
+      "Validation Accuracy = 0.640\n",
+      "\n",
+      "EPOCH 3 ...\n",
+      "Validation Accuracy = 0.755\n",
+      "\n",
+      "EPOCH 4 ...\n",
+      "Validation Accuracy = 0.869\n",
+      "\n",
+      "EPOCH 5 ...\n",
+      "Validation Accuracy = 0.899\n",
+      "\n",
+      "EPOCH 6 ...\n",
+      "Validation Accuracy = 0.900\n",
+      "\n",
+      "EPOCH 7 ...\n",
+      "Validation Accuracy = 0.945\n",
+      "\n",
+      "EPOCH 8 ...\n",
+      "Validation Accuracy = 0.957\n",
+>>>>>>> 3d68f4ccf2dfa68c8c3e35e0ded55ee8c8d1ecd1
       "\n",
       "EPOCH 9 ...\n",
-      "Validation Accuracy = 0.965\n",
-      "\n"
+      "Validation Accuracy = 0.961\n",
+      "\n",
+      "EPOCH 10 ...\n",
+<<<<<<< HEAD
+      "Validation Accuracy = 0.966\n",
+      "\n",
+      "EPOCH 11 ...\n",
+      "Validation Accuracy = 0.972\n",
+      "\n",
+      "EPOCH 12 ...\n",
+      "Validation Accuracy = 0.980\n",
+      "\n",
+      "EPOCH 13 ...\n",
+      "Validation Accuracy = 0.979\n",
+      "\n",
+      "EPOCH 14 ...\n",
+      "Validation Accuracy = 0.971\n",
+      "\n",
+      "EPOCH 15 ...\n",
+      "Validation Accuracy = 0.987\n",
+=======
+      "Validation Accuracy = 0.954\n",
+      "\n",
+      "EPOCH 11 ...\n",
+      "Validation Accuracy = 0.973\n",
+      "\n",
+      "EPOCH 12 ...\n",
+      "Validation Accuracy = 0.979\n",
+      "\n",
+      "EPOCH 13 ...\n",
+      "Validation Accuracy = 0.980\n",
+      "\n",
+      "EPOCH 14 ...\n",
+      "Validation Accuracy = 0.985\n",
+      "\n",
+      "EPOCH 15 ...\n",
+      "Validation Accuracy = 0.985\n",
+>>>>>>> 3d68f4ccf2dfa68c8c3e35e0ded55ee8c8d1ecd1
+      "\n",
+      "Model saved\n"
      ]
     }
    ],
@@ -549,7 +624,7 @@
     "        for offset in range(0, num_examples, BATCH_SIZE):\n",
     "            end = offset + BATCH_SIZE\n",
     "            batch_x, batch_y = X_train[offset:end], y_train[offset:end]\n",
-    "            sess.run(training_operation, feed_dict={x: batch_x, y: batch_y, keep_prob: 0.6})\n",
+    "            sess.run(training_operation, feed_dict={x: batch_x, y: batch_y, keep_prob: 1.0})\n",
     "            \n",
     "        validation_accuracy = evaluate(X_valid, y_valid)\n",
     "        print(\"EPOCH {} ...\".format(i+1))\n",
@@ -588,13 +663,32 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 98,
    "metadata": {
-    "collapsed": true,
+    "collapsed": false,
     "deletable": true,
     "editable": true
    },
-   "outputs": [],
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "xtrain (32, 32, 3) end\n",
+      "(32, 32, 3)\n"
+     ]
+    },
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<matplotlib.figure.Figure at 0x16c0a324278>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
    "source": [
     "### Load the images and plot them here.\n",
     "### Feel free to use as many code cells as needed.\n",
@@ -625,13 +719,30 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 106,
    "metadata": {
-    "collapsed": true,
+    "collapsed": false,
     "deletable": true,
     "editable": true
    },
-   "outputs": [],
+   "outputs": [
+    {
+     "ename": "ValueError",
+     "evalue": "Tensor(\"Reshape_9:0\", shape=(?, ?), dtype=float32) must be from the same graph as Tensor(\"Reshape:0\", shape=(?, ?), dtype=float32).",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "\u001b[1;32m<ipython-input-106-364784f795c9>\u001b[0m in \u001b[0;36m<module>\u001b[1;34m()\u001b[0m\n\u001b[0;32m     10\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m     11\u001b[0m \u001b[0mlogits\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mLeNet\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mx\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mkeep_prob\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m---> 12\u001b[1;33m \u001b[0mcross_entropy\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mtf\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mnn\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0msoftmax_cross_entropy_with_logits\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mlabels\u001b[0m\u001b[1;33m=\u001b[0m\u001b[0mone_hot_y\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mlogits\u001b[0m\u001b[1;33m=\u001b[0m\u001b[0mlogits\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m     13\u001b[0m \u001b[0mloss_operation\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mtf\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mreduce_mean\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mcross_entropy\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m     14\u001b[0m \u001b[0moptimizer\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mtf\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mtrain\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mAdamOptimizer\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mlearning_rate\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mrate\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;32mC:\\Users\\prudha\\AppData\\Local\\Continuum\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\ops\\nn_ops.py\u001b[0m in \u001b[0;36msoftmax_cross_entropy_with_logits\u001b[1;34m(_sentinel, labels, logits, dim, name)\u001b[0m\n\u001b[0;32m   1615\u001b[0m   \u001b[1;31m# _CrossEntropyGrad() in nn_grad but not here.\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m   1616\u001b[0m   cost, unused_backprop = gen_nn_ops._softmax_cross_entropy_with_logits(\n\u001b[1;32m-> 1617\u001b[1;33m       precise_logits, labels, name=name)\n\u001b[0m\u001b[0;32m   1618\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m   1619\u001b[0m   \u001b[1;31m# The output cost shape should be the input minus dim.\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;32mC:\\Users\\prudha\\AppData\\Local\\Continuum\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\ops\\gen_nn_ops.py\u001b[0m in \u001b[0;36m_softmax_cross_entropy_with_logits\u001b[1;34m(features, labels, name)\u001b[0m\n\u001b[0;32m   2263\u001b[0m   \"\"\"\n\u001b[0;32m   2264\u001b[0m   result = _op_def_lib.apply_op(\"SoftmaxCrossEntropyWithLogits\",\n\u001b[1;32m-> 2265\u001b[1;33m                                 features=features, labels=labels, name=name)\n\u001b[0m\u001b[0;32m   2266\u001b[0m   \u001b[1;32mreturn\u001b[0m \u001b[0m_SoftmaxCrossEntropyWithLogitsOutput\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0m_make\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mresult\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m   2267\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;32mC:\\Users\\prudha\\AppData\\Local\\Continuum\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\framework\\op_def_library.py\u001b[0m in \u001b[0;36mapply_op\u001b[1;34m(self, op_type_name, name, **keywords)\u001b[0m\n\u001b[0;32m    329\u001b[0m       \u001b[1;31m# Need to flatten all the arguments into a list.\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m    330\u001b[0m       \u001b[1;31m# pylint: disable=protected-access\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m--> 331\u001b[1;33m       \u001b[0mg\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mops\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0m_get_graph_from_inputs\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0m_Flatten\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mkeywords\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mvalues\u001b[0m\u001b[1;33m(\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m    332\u001b[0m       \u001b[1;31m# pyline: enable=protected-access\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m    333\u001b[0m     \u001b[1;32mexcept\u001b[0m \u001b[0mAssertionError\u001b[0m \u001b[1;32mas\u001b[0m \u001b[0me\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;32mC:\\Users\\prudha\\AppData\\Local\\Continuum\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\framework\\ops.py\u001b[0m in \u001b[0;36m_get_graph_from_inputs\u001b[1;34m(op_input_list, graph)\u001b[0m\n\u001b[0;32m   3898\u001b[0m         \u001b[0mgraph\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mgraph_element\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mgraph\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m   3899\u001b[0m       \u001b[1;32melif\u001b[0m \u001b[0moriginal_graph_element\u001b[0m \u001b[1;32mis\u001b[0m \u001b[1;32mnot\u001b[0m \u001b[1;32mNone\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m-> 3900\u001b[1;33m         \u001b[0m_assert_same_graph\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0moriginal_graph_element\u001b[0m\u001b[1;33m,\u001b[0m \u001b[0mgraph_element\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m   3901\u001b[0m       \u001b[1;32melif\u001b[0m \u001b[0mgraph_element\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mgraph\u001b[0m \u001b[1;32mis\u001b[0m \u001b[1;32mnot\u001b[0m \u001b[0mgraph\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m   3902\u001b[0m         raise ValueError(\n",
+      "\u001b[1;32mC:\\Users\\prudha\\AppData\\Local\\Continuum\\Anaconda3\\lib\\site-packages\\tensorflow\\python\\framework\\ops.py\u001b[0m in \u001b[0;36m_assert_same_graph\u001b[1;34m(original_item, item)\u001b[0m\n\u001b[0;32m   3837\u001b[0m   \u001b[1;32mif\u001b[0m \u001b[0moriginal_item\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mgraph\u001b[0m \u001b[1;32mis\u001b[0m \u001b[1;32mnot\u001b[0m \u001b[0mitem\u001b[0m\u001b[1;33m.\u001b[0m\u001b[0mgraph\u001b[0m\u001b[1;33m:\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m   3838\u001b[0m     raise ValueError(\n\u001b[1;32m-> 3839\u001b[1;33m         \"%s must be from the same graph as %s.\" % (item, original_item))\n\u001b[0m\u001b[0;32m   3840\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m   3841\u001b[0m \u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mValueError\u001b[0m: Tensor(\"Reshape_9:0\", shape=(?, ?), dtype=float32) must be from the same graph as Tensor(\"Reshape:0\", shape=(?, ?), dtype=float32)."
+     ]
+    }
+   ],
    "source": [
     "### Run the predictions here and use the model to output the prediction for each image.\n",
     "### Make sure to pre-process the images with the same pre-processing pipeline used earlier.\n",
@@ -849,9 +960,9 @@
  "metadata": {
   "anaconda-cloud": {},
   "kernelspec": {
-   "display_name": "py3",
+   "display_name": "Python 3",
    "language": "python",
-   "name": "py3"
+   "name": "python3"
   },
   "language_info": {
    "codemirror_mode": {
@@ -863,7 +974,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.0"
+   "version": "3.5.3"
   }
  },
  "nbformat": 4,
