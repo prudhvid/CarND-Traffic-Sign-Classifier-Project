@@ -1,8 +1,4 @@
-#**Traffic Sign Recognition** 
-
-##Writeup Template
-
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+# **Traffic Sign Recognition** 
 
 ---
 
@@ -19,45 +15,46 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./imgs/graph.png "Visualization"
+[image2]: ./pics/grayscale.jpg "Grayscaling"
+[image3]: ./pics/.png "Random Noise"
+[image4]: ./pics/0.png "Traffic Sign 1"
+[image5]: ./pics/1.png "Traffic Sign 2"
+[image6]: ./pics/2.png "Traffic Sign 3"
+[image7]: ./pics/3.png "Traffic Sign 4"
+[image8]: ./pics/4.png "Traffic Sign 5"
+[image9]: ./pics/5.png "Traffic Sign 5"
+[image10]: ./pics/8.png "Traffic Sign 5"
+[image11]: ./pics/11.png "Traffic Sign 5"
+[image12]: ./pics/12.png "Traffic Sign 5"
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+You're reading it! and here is a link to my [project code](https://github.com/prudhvid/CarND-Traffic-Sign-Classifier-Project)
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+### Data Set Summary & Exploration
 
-###Data Set Summary & Exploration
+#### 1. A basic summary of the data set. 
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
-I used the pandas library to calculate summary statistics of the traffic
+I used the python library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is 34799
+* The size of the validation set is 12630
+* The size of test set is 4410
+* The shape of a traffic sign image is 32x32x3
+* The number of unique classes/labels in the data set is 43
 
-####2. Include an exploratory visualization of the dataset.
+#### 2. An exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the frequency of training examples varies across classes
 
-![alt text][image1]
+![Frequncy vs class graph][image1]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
@@ -105,7 +102,7 @@ My final model consisted of the following layers:
 
 To train the model, I used Adam Optimizer with batch size of 128 and with 10 epochs. The training occurs in two passes, first pass with learning rate - 0.001 and second with learning rate - 0.0001. The keep probabilty for the dropouts is assigned to be 0.6. Adam optimizer optimizes to reduce the cross entropy of the model. 
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 4. The approach taken for finding a solution and getting the validation set accuracy to be at least 0.93.
 
 My final model results were:
 * training set accuracy of 99.5
@@ -119,8 +116,6 @@ If a well known architecture was chosen:
 * Also added dropout layers between fully connected to avoid overfitting
 * To over overfitting with the new complex model, augmented dataset to add more training examples
 * This enabled the model to achieve a validation accuracy of 96.5%, test accuracy of 98.1%, training accuracy of 99.5%
-
- 
 
 ###Test a Model on New Images
 
