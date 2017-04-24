@@ -33,6 +33,11 @@ The goals / steps of this project are the following:
 [image16]: ./imgs/g.png "gamma"
 [image17]: ./imgs/gn.png "guassian"
 [image18]: ./imgs/r.png "rotation"
+[image19]: ./imgs/f.png "Traffic Sign 10"
+[image20]: ./imgs/pred.png "Predictions"
+[image21]: ./imgs/right.png "right"
+[image22]: ./imgs/right-n.png "right-neural"
+[image23]: ./imgs/right-n2.png "right-neural2"
 
 
 
@@ -64,13 +69,14 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ### Design and Test a Model Architecture
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Preprocessing the image data.
 
-As a first step, I decided to use histogram equalization using equalist_adapthist. This will help in spreading the intensities across all layers
+As a first step, I decided to use histogram equalization using equalize_adapthist. This will help in spreading the intensities across all the pixels. I initally tried
+testing with rbg images and hsv images. But the results are not soo good. So finally I've changes to grayscale image after equalize_adapthist.
 
-Here is an example of a traffic sign image before and after grayscaling.
+Here is an example of a traffic sign image before and after preprocessing.
 
-![alt text][image2]
+![alt text][image19]
 
 As a last step, I normalized the image data because the SGD algorithm works best when the data is normalized around mean 0.
 By dividing it within 255.0 initially, all the images were brought within the range of `[0-1.0]`, later I did `(x-0.5)/0.5` to normalize the data between
@@ -156,41 +162,64 @@ Here are nine German traffic signs that I found on the web:
 ![alt text][image7] ![alt text][image8] ![alt text][image9]
 ![alt text][image10] ![alt text][image11] ![alt text][image12]
 
-The first image might be difficult to classify because ...
+All these images are classified correctly with high probabilty for the classsification. 
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs.
+Below on these new images, of the type never seen before by the model during training, and it had struggled to give correct answers
+
+![alt text][image19]
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+![alt text][image20]
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess correctly on all images **similar** to the ones it has seen before. But when given traffic signs of other countries, like for eg, here in one of the examples, **the wild animals crossing sign is flipped when compared to the german dataset** and the model failed to predict it. **The accuracy for all images taken from the web turns out to be 66.7% and that of those images similar to german dataset is 100%.** 
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For all the german data set images, the model is pretty sure(close to 95-100%) evidently from the bar graph. But for new datasets, here are the results
+
+**Pedestrian crossing**
+The model predicted the new sign as children crossing, probably because of new horizontal lines which is not present in German dataset pedestrian crossing images
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .85         			|   Children crossing 									| 
+| .12     				| bicycle crossing 										|
+| .08					| Pedestrian crossing							|
 
 
-For the second image ... 
+**Stop sign**
+The model predicted the new sign as stop sign with a very high probabilty, which is pretty amazing!! 
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .99         			|  Stop sign									| 
+
+**Bumpy Road**
+The model predicted the new sign as end of all speed and passing limits, probably because the traffic sign is not exactly cropped to fit entirely with the image
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .65         			|  End of all speed and passing limits									| 
+| .09     				| Road work 										|
+| .08					| Bumpy road							|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+#### 1.Visual output of your trained network's feature maps.
 
+![alt text][image21]
+![alt text][image22]
 
+* This shows the first layer visualization of the cnn.
+* If we look closely, 
+    * Feature 16 represents the edges of the input image
+    * Feature 12 represents the inverse image
+    * Other features which are not very obvious from here
+
+![alt text][image23]
+
+At layer 2, it has become more complex, to analyze the image especially because of the relu units.
