@@ -27,6 +27,14 @@ The goals / steps of this project are the following:
 [image10]: ./pics/6.png "Traffic Sign 7"
 [image11]: ./pics/7.png "Traffic Sign 8"
 [image12]: ./pics/8.png "Traffic Sign 9"
+[image13]: ./imgs/graph2.png "Visualization2"
+[image14]: ./imgs/pt.png "orig"
+[image15]: ./imgs/pt2.png "perspective"
+[image16]: ./imgs/g.png "gamma"
+[image17]: ./imgs/gn.png "guassian"
+[image18]: ./imgs/r.png "rotation"
+
+
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -58,7 +66,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, I decided to use histogram equalization using equalist_adapthist. This will help in spreading the intensities across all layers
 
 Here is an example of a traffic sign image before and after grayscaling.
 
@@ -74,11 +82,28 @@ By dividing it within 255.0 initially, all the images were brought within the ra
 condtion, hence generated lots of images with different gamma
 3. The other augmentations applied also helps in balancing the dataset
 
-Here is an example of an original image and an augmented image:
+#### Here are some examples of an original image and an augmented image:
 
-![alt text][image3]
+**Perpective Transform**
 
-The difference between the original data set and the augmented data set is the following ... 
+![alt text][image14] ![alt text][image15]
+
+
+**Rotation Transform**
+
+![alt text][image14] ![alt text][image18]
+
+**Random Gamma correction**
+
+![alt text][image14] ![alt text][image16]
+
+**Guassian Noise Correction**
+
+![alt text][image14] ![alt text][image17]
+
+After all the augmentations, the frequency vs classes graph looks like this
+
+![alt text][image13]
 
 #### 2. Final model architecture
 
@@ -111,7 +136,7 @@ To train the model, I used Adam Optimizer with batch size of 128 and with 10 epo
 My final model results were:
 * training set accuracy of 99.5
 * validation set accuracy of 96.5
-* test set accuracy of 98.1
+* test set accuracy of 96.4
 
 If a well known architecture was chosen:
 * Started with LeNet model as it is good for generic classification of image data, and had acheived a very high accuracy with handwriting data sets
@@ -119,7 +144,7 @@ If a well known architecture was chosen:
 * To add more complexity to the model, added a fully connected layer and increased the width of each layer within the model
 * Also added dropout layers between fully connected to avoid overfitting
 * To over overfitting with the new complex model, augmented dataset to add more training examples
-* This enabled the model to achieve a validation accuracy of 96.5%, test accuracy of 98.1%, training accuracy of 99.5%
+* This enabled the model to achieve a validation accuracy of 96.5%, test accuracy of 96.4%, training accuracy of 99.5%
 
 ### Test a Model on New Images
 
