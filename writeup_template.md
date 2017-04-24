@@ -5,7 +5,7 @@
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
+* Load the data set, downloaded from [here](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
@@ -23,10 +23,10 @@ The goals / steps of this project are the following:
 [image6]: ./pics/2.png "Traffic Sign 3"
 [image7]: ./pics/3.png "Traffic Sign 4"
 [image8]: ./pics/4.png "Traffic Sign 5"
-[image9]: ./pics/5.png "Traffic Sign 5"
-[image10]: ./pics/8.png "Traffic Sign 5"
-[image11]: ./pics/11.png "Traffic Sign 5"
-[image12]: ./pics/12.png "Traffic Sign 5"
+[image9]: ./pics/5.png "Traffic Sign 6"
+[image10]: ./pics/6.png "Traffic Sign 7"
+[image11]: ./pics/7.png "Traffic Sign 8"
+[image12]: ./pics/8.png "Traffic Sign 9"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -39,7 +39,7 @@ You're reading it! and here is a link to my [project code](https://github.com/pr
 
 #### 1. A basic summary of the data set. 
 
-I used the python library to calculate summary statistics of the traffic
+I used the python numpy library to calculate summary statistics of the traffic
 signs data set:
 
 * The size of training set is 34799
@@ -56,7 +56,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 As a first step, I decided to convert the images to grayscale because ...
 
@@ -64,11 +64,15 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image2]
 
-As a last step, I normalized the image data because ...
+As a last step, I normalized the image data because the SGD algorithm works best when the data is normalized around mean 0.
+By dividing it within 255.0 initially, all the images were brought within the range of `[0-1.0]`, later I did `(x-0.5)/0.5` to normalize the data between
+-1 to 1
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
+#### I decided to generate additional data because
+1. The initial dataset has non-uniform distribution which will lead to bias of the classes with more freqency
+2. From the failure cases, I figured that for many of the images which the model was unable to predict the correct class, usually it was due to the lighening
+condtion, hence generated lots of images with different gamma
+3. The other augmentations applied also helps in balancing the dataset
 
 Here is an example of an original image and an augmented image:
 
@@ -76,7 +80,7 @@ Here is an example of an original image and an augmented image:
 
 The difference between the original data set and the augmented data set is the following ... 
 
-####2. final model architecture looks like including model type, layers, layer sizes, connectivity, etc.)
+#### 2. Final model architecture
 
 My final model consisted of the following layers:
 
@@ -117,18 +121,19 @@ If a well known architecture was chosen:
 * To over overfitting with the new complex model, augmented dataset to add more training examples
 * This enabled the model to achieve a validation accuracy of 96.5%, test accuracy of 98.1%, training accuracy of 99.5%
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Classifying images from the web
 
-Here are five German traffic signs that I found on the web:
+Here are nine German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image7] ![alt text][image8] ![alt text][image9]
+![alt text][image10] ![alt text][image11] ![alt text][image12]
 
 The first image might be difficult to classify because ...
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
